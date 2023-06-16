@@ -115,14 +115,16 @@ input, select, textarea {
 		border-bottom: dotted 1px;
 		/* color: #49bf9d; */
 		color: #ffffff;
-		text-decoration: none;
+		/* text-decoration: none; */
+		text-decoration: underline;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
 			/* color: #49bf9d !important; */
 			color: #369aae !important;
-			text-decoration: none;
+			/* text-decoration: none; */
+			text-decoration: underline;
 		}
 
 	strong, b {
