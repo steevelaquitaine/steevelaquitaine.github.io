@@ -2642,6 +2642,7 @@ input, select, textarea {
 
 		#header li {
 		  list-style: none; /* Remove default bullets */
+		  text-align: center;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
