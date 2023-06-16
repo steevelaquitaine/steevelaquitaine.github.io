@@ -2146,7 +2146,7 @@ input, select, textarea {
 			}
 
 		.image.avatar {
-			border-radius: 99%;
+			border-radius: 100%;
 		}
 
 			.image.avatar:before {
@@ -2154,7 +2154,7 @@ input, select, textarea {
 			}
 
 			.image.avatar img {
-				border-radius: 99%;
+				border-radius: 100%;
 				width: 100%;
 			}
 
@@ -2664,6 +2664,7 @@ input, select, textarea {
 		#header .image.avatar {			
 			margin: 1em;
 			/* width: 14.00em; */
+			width: 12.00em;
 			display: block;
     			margin-left: auto;
     			margin-right: auto 
