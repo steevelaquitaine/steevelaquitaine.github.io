@@ -2051,8 +2051,9 @@ input, select, textarea {
 		border-radius: 0.35em;
 		border: 0;
 		display: inline-block;
-		position: relative;
-		text-align: center;
+		position: relative;		
+		margin-left: auto;
+    		margin-right: auto;
 	}
 
 		.image:before {
