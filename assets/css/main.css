@@ -2633,6 +2633,7 @@ input, select, textarea {
 			flex-grow: 1;
 			margin: 0 0 2em 0;
 			text-align: justify;
+			color: #000000;
 		}
 
 		#header strong, #header b {
@@ -2640,7 +2641,8 @@ input, select, textarea {
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			/*color: #ffffff;*/
+			color: #000000;
 		}
 
 		#header h1 {
