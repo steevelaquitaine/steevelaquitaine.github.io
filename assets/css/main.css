@@ -2650,8 +2650,9 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: #C70039;
 			font-size: 1.35em;
+			font-weight: 700;
 			line-height: 1.75em;
 			margin: 0;
 		}
