@@ -114,7 +114,7 @@ input, select, textarea {
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
 		/* color: #49bf9d; */
-		color: #ffffff;
+		color: #000000;
 		/* text-decoration: none; */
 		text-decoration: underline;
 	}
