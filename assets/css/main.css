@@ -2634,16 +2634,14 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 			text-align: justify;
 			color: #000000;
-			ul {
-			  list-style: none; /* Remove default bullets */
-			}
-			ul li::before {
-			  color: red; /* Change the color */
-			}
 		}
 
 		#header strong, #header b {
 			color: #ffffff;
+		}
+
+		#header li {
+		  list-style: none; /* Remove default bullets */
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
