@@ -2176,7 +2176,7 @@ input, select, textarea {
 		}
 		
 		/* for the social media urls
-		ul-social {
+		li-social {
 		    list-style: none;  /* removes bullets */
 		    padding: 0;        /* removes default indentation */
 		    margin: 0;
