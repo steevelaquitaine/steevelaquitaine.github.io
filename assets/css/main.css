@@ -2156,31 +2156,31 @@ input, select, textarea {
 				height: auto;         /* keep the aspect ratio */
 				border-radius: 12px;  /* rounded corners, adjust as needed */
 			}
-		
-			/* #header .image.avatar img {
-			/*     width: 100%;          /* fill the container width */
-			/*     height: auto;         /* keep the aspect ratio */
-			/*     max-width: 200px;     /* optional: limit size */			    
-			/*     object-fit: contain;  /* ensures the full image fits inside the box */
-			/* }
 
 /* List */
 
-	ol {
-		list-style: decimal;
-		margin: 0 0 2em 0;
-		padding-left: 1.25em;
-	}
-
-		ol li {
-			padding-left: 0.25em;
+		ol {
+			list-style: decimal;
+			margin: 0 0 2em 0;
+			padding-left: 1.25em;
 		}
-
-	ul {
-		list-style: disc;
-		margin: 0 0 2em 0;
-		padding-left: 1em;
-	}
+	
+			ol li {
+				padding-left: 0.25em;
+			}
+	
+		ul {
+			list-style: disc;
+			margin: 0 0 2em 0;
+			padding-left: 1em;
+		}
+		
+		/* for the social media urls
+		ul-social {
+		    list-style: none;  /* removes bullets */
+		    padding: 0;        /* removes default indentation */
+		    margin: 0;
+		}
 
 		ul li {
 			padding-left: 0.5em;
