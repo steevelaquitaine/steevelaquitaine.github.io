@@ -2152,8 +2152,17 @@ input, select, textarea {
 
 			.image.avatar img {
 				border-radius: 100%;
-				width: 100%;
+				width: 100%;          /* fill the container width */
+				height: auto;         /* keep the aspect ratio */
+				border-radius: 12px;  /* rounded corners, adjust as needed */
 			}
+		
+			/* #header .image.avatar img {
+			/*     width: 100%;          /* fill the container width */
+			/*     height: auto;         /* keep the aspect ratio */
+			/*     max-width: 200px;     /* optional: limit size */			    
+			/*     object-fit: contain;  /* ensures the full image fits inside the box */
+			/* }
 
 /* List */
 
@@ -2654,6 +2663,8 @@ input, select, textarea {
 			margin: 0 0 1em 0;
 			width: 12.25em;
 		}
+		
+
 
 /* Footer */
 
