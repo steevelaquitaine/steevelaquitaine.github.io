@@ -3242,3 +3242,62 @@ input, select, textarea {
 			}
 
 	}
+
+
+
+
+
+/* Modern Navigation Tabs */
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    padding: 0.75em 1em;
+    text-decoration: none;
+    color: #000000;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    border-left-color: #C70039;
+    background: rgba(199, 0, 57, 0.05);
+    color: #C70039;
+}
+
+.nav-link.active {
+    border-left-color: #C70039;
+    color: #C70039;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 980px) {
+    .main-nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-top: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 1em;
+    }
+    
+    .nav-link {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        border-left: none;
+        border-bottom-color: #C70039;
+        background: transparent;
+    }
+}
