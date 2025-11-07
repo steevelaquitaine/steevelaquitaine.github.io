@@ -2663,10 +2663,6 @@ input, select, textarea {
 			margin: 0;
 		}
 
-		#header {
-		  padding-top: 2em;    /* reduce from default (~6em) */
-		  padding-bottom: 1em; /* optional: tighten below */
-		}
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
