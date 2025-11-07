@@ -2166,7 +2166,8 @@ input, select, textarea {
 			height: 100%;
 			object-fit: cover;       /* crop nicely inside the square */
 			object-position: center 60%; /* center horizontally, lower vertically */
-			border-radius: 10%;			
+			border-radius: 10%;		
+			transform: translateY(10%); /* push image down slightly */
 		}
 
 /* List */
