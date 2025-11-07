@@ -2143,17 +2143,30 @@ input, select, textarea {
 			}
 
 		.image.avatar {
-			border-radius: 100%;
+			/* border-radius: 100%;
+			width: 20vw;            /* 20% of viewport width — adjust for size */
+			height: 20vw;           /* equal height → stays square */
+			max-width: 200px;       /* optional upper limit for large screens */
+			max-height: 200px;
+			min-width: 120px;       /* optional lower limit for small screens */
+			min-height: 120px;
+			overflow: hidden;
+			border-radius: 10%;     /* smooth corners; try 5%–15% for style */
+			margin: 0 auto 1em auto; /* center align */
 		}
 
-			.image.avatar:before {
-				display: none;
-			}
+		.image.avatar:before {
+			display: none;
+		}
 
-			.image.avatar img {
-				border-radius: 100%;
-				width: 100%;
-			}
+		.image.avatar img {
+			/* border-radius: 100%;
+			/* width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;       /* crop nicely inside the square */
+			border-radius: 10%;			
+		}
 
 /* List */
 
@@ -2652,16 +2665,16 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 12.25em;
+			width: 12.25em; /* width: 12.25em;
 		}
 		
 		/* Make profile picture square with rounded corners */
-		#header .image.avatar img {
-		  border-radius: 12px; /* adjust corner roundness: 0 = square, 50% = circle */
-		  width: 100%;         /* keep responsive size */
-		  height: auto;        /* preserve aspect ratio */
-		  object-fit: cover;   /* ensures it fills nicely */
-		}
+		/*#header .image.avatar img {
+		/* border-radius: 12px; /* adjust corner roundness: 0 = square, 50% = circle */
+		/*  width: 100%;         /* keep responsive size */
+		/*  height: auto;        /* preserve aspect ratio */
+		/*  object-fit: cover;   /* ensures it fills nicely */
+		/*}
 
 /* Footer */
 
