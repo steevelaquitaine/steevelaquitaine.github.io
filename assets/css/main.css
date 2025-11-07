@@ -2631,7 +2631,7 @@ input, select, textarea {
 	  /* display: flex;
 	  /* flex-wrap: wrap;          /* allow wrapping on smaller screens */
 	  /* align-items: center;      /* vertical center on large screens */
-	  gap: 2rem;                /* spacing between avatar and navbar */
+	  /* gap: 2rem;                /* spacing between avatar and navbar */
 	  /* padding: 1rem 2rem;
 	  /* background-color: #fdfdfd; /* light background */
 	  /* border-radius: 12px;
