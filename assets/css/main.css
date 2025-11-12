@@ -3248,34 +3248,48 @@ input, select, textarea {
 
 
 /* Modern Navigation Tabs */
+
 .main-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    margin-top: 2em;
-    padding-top: 2em;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* display: flex;
+    /* flex-direction: column;
+    /* gap: 0.5em;
+    /* margin-top: 2em;
+    /* padding-top: 2em;
+    /* border-top: 1px solid rgba(0, 0, 0, 0.1);
+	display: flex;              /* Aligns the nav items horizontally */
+  	justify-content: center;    /* Centers them; use space-between if you prefer spread out */
+	gap: 1.5rem;                /* Adds space between tabs */
+  	background-color: transparent; /* Optional: remove background if present */
+  	padding: 10px 0;
 }
 
 .nav-link {
-    padding: 0.75em 1em;
-    text-decoration: none;
-    color: #000000;
-    border-left: 3px solid transparent;
-    transition: all 0.2s ease;
-    font-weight: 400;
+    /* padding: 0.75em 1em;
+    /* text-decoration: none;
+    /* color: #000000;
+    /* border-left: 3px solid transparent;
+    /* transition: all 0.2s ease;
+    /* font-weight: 400;
+  	text-decoration: none;      /* Removes the underline */
+  	color: #333;                /* Sets link color */
+  	font-weight: 500;           /* Optional: makes text slightly bold */
+  	transition: color 0.2s;	
 }
 
 .nav-link:hover {
-    border-left-color: #C70039;
-    background: rgba(199, 0, 57, 0.05);
-    color: #C70039;
+    /* border-left-color: #C70039;
+    /* background: rgba(199, 0, 57, 0.05);
+    /* color: #C70039;
+	color: #007acc;             /* Changes color on hover */
 }
 
+
 .nav-link.active {
-    border-left-color: #C70039;
-    color: #C70039;
-    font-weight: 500;
+    /* border-left-color: #C70039;
+    /* color: #C70039;
+    /* font-weight: 500;
+  	/* border-bottom: 2px solid #007acc; /* Optional highlight for active tab */
+  	color: #007acc;	
 }
 
 /* Responsive adjustments */
