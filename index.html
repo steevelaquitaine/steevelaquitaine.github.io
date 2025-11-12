@@ -14,31 +14,36 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
 
+
+	
+<!-- Navigation bar -->
+<nav class="main-nav">
+  <div class="menu-toggle" id="menu-toggle">
+	☰
+  </div>
+  <div class="nav-links" id="nav-links">
+	<a href="research.html" class="nav-link">Research</a>
+	<a href="publications.html" class="nav-link">Publications</a>
+	<a href="teaching.html" class="nav-link">Teaching</a>
+	<a href="software.html" class="nav-link">Software</a>
+  </div>
+</nav>
+
+<script>
+  // Toggle menu open/close
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+	document.getElementById('nav-links').classList.toggle('active');
+  });
+</script>
+
+
+
 <body class="is-preload">
 
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
 	
-			<!-- Navigation bar -->
-			<nav class="main-nav">
-			  <div class="menu-toggle" id="menu-toggle">
-			    ☰
-			  </div>
-			  <div class="nav-links" id="nav-links">
-			    <a href="research.html" class="nav-link">Research</a>
-			    <a href="publications.html" class="nav-link">Publications</a>
-			    <a href="teaching.html" class="nav-link">Teaching</a>
-			    <a href="software.html" class="nav-link">Software</a>
-			  </div>
-			</nav>
-			
-			<script>
-			  // Toggle menu open/close
-			  document.getElementById('menu-toggle').addEventListener('click', function() {
-			    document.getElementById('nav-links').classList.toggle('active');
-			  });
-			</script>
 	
 	
 				
@@ -308,6 +313,7 @@ in spike sorting, have reduced sampling biases, such as the preferential selecti
 </body>
 
 </html>
+
 
 
 
