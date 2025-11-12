@@ -15,8 +15,121 @@
 </head>
 
 
+
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Navigation container */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Hamburger icon */
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+    display: block;
+  }
+
+  /* Nav links (hidden by default) */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-link:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none; /* hide hamburger on desktop */
+    }
+
+    .nav-links {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      border: none;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      border: none;
+      padding: 0;
+    }
+
+    .nav-link:hover {
+      background: none;
+      color: #007acc;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+  <div class="nav-links" id="nav-links">
+    <a href="research.html" class="nav-link">Research</a>
+    <a href="publications.html" class="nav-link">Publications</a>
+    <a href="teaching.html" class="nav-link">Teaching</a>
+    <a href="software.html" class="nav-link">Software</a>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById('menu-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('active');
+    });
+  });
+</script>
+
+
+
+
+
 	
-<!-- Navigation bar -->
+<!-- Navigation bar 
 <nav class="main-nav">
   <div class="menu-toggle" id="menu-toggle">
 	☰
@@ -39,7 +152,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+-->
 
+
+
+
+	
 
 <body class="is-preload">
 
@@ -316,6 +434,7 @@ in spike sorting, have reduced sampling biases, such as the preferential selecti
 </body>
 
 </html>
+
 
 
 
