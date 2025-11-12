@@ -3360,9 +3360,11 @@ input, select, textarea {
   color: #007acc;
 }
 
+
 /* When active (menu opened) */
 .nav-links.active {
-  display: flex;
+  /* display: flex; */
+  display: flex !important; /* Safari respects this better */
 }
 
 /* Optional: desktop layout (show links horizontally) */
@@ -3371,11 +3373,17 @@ input, select, textarea {
     display: none; /* Hide hamburger icon on larger screens */
   }
 
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin-top: 0;
-  }
+  /* .nav-links {
+     display: flex; 
+     flex-direction: row; 
+     gap: 2rem; 
+     margin-top: 0; 
+  } */
+
+   .nav-links {
+  	display: none;
+  	flex-direction: column;
+  	margin-top: 10px;
+}	
 }
 
