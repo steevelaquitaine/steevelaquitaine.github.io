@@ -30,12 +30,15 @@
 </nav>
 
 <script>
-  // Toggle menu open/close
-  document.getElementById('menu-toggle').addEventListener('click', function() {
-	document.getElementById('nav-links').classList.toggle('active');
-  });
-</script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('nav-links');
 
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('active');
+  });
+});
+</script>
 
 
 <body class="is-preload">
@@ -313,6 +316,7 @@ in spike sorting, have reduced sampling biases, such as the preferential selecti
 </body>
 
 </html>
+
 
 
 
