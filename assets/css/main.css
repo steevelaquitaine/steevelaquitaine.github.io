@@ -3249,7 +3249,7 @@ input, select, textarea {
 
 /* Modern Navigation Tabs */
 
-.main-nav {
+/* .main-nav {
     /* display: flex;
     /* flex-direction: column;
     /* gap: 0.5em;
@@ -3291,9 +3291,10 @@ input, select, textarea {
   	/* border-bottom: 2px solid #007acc; /* Optional highlight for active tab */
   	color: #007acc;	
 }
+*/
 
 /* Responsive adjustments */
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
     .main-nav {
         flex-direction: row;
         justify-content: center;
@@ -3315,3 +3316,66 @@ input, select, textarea {
         background: transparent;
     }
 }
+ */
+
+
+
+
+
+/* Main navigation container */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 10px 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Hamburger icon */
+.menu-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hidden nav links by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+/* Each link styling */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #007acc;
+}
+
+/* When active (menu opened) */
+.nav-links.active {
+  display: flex;
+}
+
+/* Optional: desktop layout (show links horizontally) */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0;
+  }
+}
+
