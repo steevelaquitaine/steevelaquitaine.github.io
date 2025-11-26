@@ -1,1 +1,302 @@
 
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Strata by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	
+	<!-- Add font awesomes -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Add academicons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+</head>
+
+
+
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Navigation container */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Hamburger icon */
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+    display: block;
+  }
+
+  /* Nav links (hidden by default) */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-link:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none; /* hide hamburger on desktop */
+    }
+
+    .nav-links {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      border: none;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      border: none;
+      padding: 0;
+    }
+
+    .nav-link:hover {
+      background: none;
+      color: #007acc;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+  <div class="nav-links" id="nav-links">
+    <a href="research.html" class="nav-link">Research</a>
+    <a href="publications.html" class="nav-link">Publications</a>
+    <a href="teaching.html" class="nav-link">Teaching</a>
+    <a href="software.html" class="nav-link">Software</a>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById('menu-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('active');
+    });
+  });
+</script>
+
+
+
+
+
+	
+<!-- Navigation bar 
+<nav class="main-nav">
+  <div class="menu-toggle" id="menu-toggle">
+	☰
+  </div>
+  <div class="nav-links" id="nav-links">
+	<a href="research.html" class="nav-link">Research</a>
+	<a href="publications.html" class="nav-link">Publications</a>
+	<a href="teaching.html" class="nav-link">Teaching</a>
+	<a href="software.html" class="nav-link">Software</a>
+  </div>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('active');
+  });
+});
+</script>
+-->
+
+
+
+
+	
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+	
+	
+	
+				
+			<!--  profile picture -->
+			<a href="#" class="image avatar"><img src="images/profile_pic.jpg" alt="" /></a>
+
+			<!--  position -->
+			<h1>Steeve Laquitaine, PhD</h1>
+
+			<!--  Job -->
+			<p>Postdoc at <span style="color:#C70039;">Sorbonne Universite, Paris Vision Institute</span> & Affiliate at <span style="color:#C70039;">Stanford University </span>, ex-<span style="color:#C70039;">EPFL</span> </p>
+			
+			<!--  pitch -->
+			<p>I study efficient inference & decision-making in biological & artificial neural networks. I use mathematical theory, computational models to link large-scale neural recordings and psychophysics.</p>
+	
+			<!-- mail -->
+			<li-social><a href="laquitainesteeve@gmail.fr"><i class="fa fa-fw fa-envelope-square ai-1x" aria-hidden="true"></i> Mail</a></li-social>
+			
+			<!-- twitter icon -->
+			<li-social><a href="https://twitter.com/sl_neuro"><i class="fa fa-fw fa-twitter-square ai-1x" aria-hidden="true"></i> Twitter</a></li-social>
+			
+			<!-- linkedin icon -->
+			<li-social><a href="https://www.linkedin.com/in/steevelaquitaine"><i class="fa fa-fw fa-linkedin-square ai-1x" aria-hidden="true"></i> Linkedin</a></li-social>
+
+			<!-- google scholar -->
+			<li-social><a href="https://scholar.google.com/citations?user=ftTg_S4AAAAJ&hl=fr&oi=ao"><i class="ai ai-google-scholar-square ai-1x" aria-hidden="true"></i> Google scholar</a></li-social>
+
+			<!-- orcid icon -->
+			<li-social><a href="https://orcid.org/0000-0002-9647-3149"><i class="fab fa-fw fa-orcid ai-1x" aria-hidden="true"></i> Orcid</a></li-social>
+
+			<!-- Github icon -->
+			<li-social><a href="https://github.com/steevelaquitaine"><i class="fab fa-fw fa-github ai-1x" aria-hidden="true"></i> Github</a></li-social>
+
+			<!-- Teaching icon -->
+			<li-social><a href="https://steevelaquitaine.github.io/teaching_statement.html"><i class="ai ai-google-scholar-square ai-1x" aria-hidden="true"></i> Teaching Statement</a></li-social>
+		</div>
+	</header>
+
+	
+	
+	<!-- Main -->
+	<div id="main">
+
+	<!-- Navigation tab -->
+	<!-- <nav class="main-nav">
+		<a href="#research" class="nav-link active">Research</a>
+		<a href="#publications" class="nav-link">Publications</a>
+		<a href="#teaching" class="nav-link">Teaching</a>
+		<a href="#software" class="nav-link">Software</a>
+	</nav>	
+	-->
+
+		
+	</section>
+	<section>
+			<h2>Peer-reviewed publications</h2>
+			<ul>
+				<li><strong><span style="color:#C70039;">Laquitaine, S.*</span></strong>, Azeglio, S.*, Paris C., Ferrari U., & Chalk M., (2025). Decomposing stimulus-specific sensory neural information via diffusion models. <strong>Advances in Neural Information Processing Systems (NeurIPS)</strong>
+				<li><strong><span style="color:#C70039;">Laquitaine, S.</span></strong>, Imbeni, M., Tharayil J., & Reimann M., (2023). A biophysically detailed cortical circuit model to evaluate and improve spike sorting of large-scale neural recordings (In preparation).
+				<li>Rentzeperis, I., <strong><span style="color:#C70039;">Laquitaine, S.</span></strong>, & van Leeuwen, C. (2022). Adaptive
+					rewiring of random neural
+					networks generates convergent–divergent units. <strong>Communications in Nonlinear Science and Numerical
+					Simulation</strong>, 107, 106135
+				<li><strong><span style="color:#C70039;">Laquitaine, S.</span></strong>, & Gardner, J. L. (2018). A switching observer for human perceptual
+					estimation.
+					<u><strong>Neuron</strong></u>, 97(2), 462-474.
+				<li><strong><span style="color:#C70039;">Laquitaine, S.</span></strong>, Piron, C., Abellanas, D., Loewenstein, Y., & Boraud, T. (2013).
+					Complex population
+					response of dorsal putamen neurons predicts the ability to learn. <strong>PLoS One</strong>, 8(11), e80683.
+				<li>Chetrit, J., Ballion, B., <strong><span style="color:#C70039;">Laquitaine, S.</span></strong>, Belujon, P., Morin, S., Taupignon, A.,
+					... & Benazzouz, A.
+					(2009). Involvement of Basal Ganglia network in motor disabilities induced by typical
+					antipsychotics. <strong>PLoS One</strong>, 4(7), e6208.
+			</ul>
+
+			<h2>Peer-reviewed International Conference Proceedings</h2>
+			<ul>
+				<li>Rentzeperis I., <strong><span style="color:#C70039;">Laquitaine, S.</span></strong>, Cees van Leeuwen (2020, January). Adaptive rewiring evolves brain-like structure in directed networks. In CEUR Workshop. Madrid, Spain.
+				</li>
+				<li><strong><span style="color:#C70039;">Laquitaine, S.</span></strong>, & Gardner, J. L., (2013) Humans exploit the uncertainty in priors to improve direction perception. In Cosyne, Salt Lake City, Utah, February 8th - March 3 
+				</li>	
+			</ul>
+
+			<h2>Peer-reviewed national Conference Proceedings</h2>
+			<ul>
+				<li><strong><span style="color:#C70039;">Laquitaine S.</span></strong>, Loewenstein Y., Gross C., Hansel D., Boraud. (2009) T. Learning behaviour in a two alternative decision task in primate follows a gradient-based learning rule. Neurocomp’09, Computational Neuroscience : From Multiple levels to Multi-level, page 19, Bordeaux, France
+				</li>
+			</ul>
+
+			<h2>Non peer-reviewed</h2>
+			<ul>
+				<li><strong><span style="color:#C70039;">Laquitaine S</span></strong>., Azeglio S., Paris C., Ferrari, U., Chalk M. (2025) Decomposing stimulus-specific sensory neural information via diffusion models, arXiv.
+				</li>
+				<li><strong><span style="color:#C70039;">Laquitaine S</span></strong>., Imbeni M., Tharayil J., Isbister, J., Reimann M. (2025) Spike sorting biases and information loss in a detailed cortical model, bioRxiv.
+				</li>
+				<li>Birman D., Cable, D., & <strong><span style="color:#C70039;">Laquitaine S.</span></strong> (2017) Applying 3D Convolutional Neural Networks to Human Psychophysics, Working Paper for Stanford CS231N, Palo Alto, CA, USA
+				</li>
+				<li>Rentzeperis I., <strong><span style="color:#C70039;">Laquitaine S.</span></strong>, Gardner J., (2016) Expectation modulates activity in Visual Cortex, Conference abstract at AREADNE, Santorini, Greece. 
+				</li>
+				<li><strong><span style="color:#C70039;">Laquitaine S.</span></strong>, & Justin L. Gardner. Humans exploit the uncertainty and the bimodality of their priors to improve direction perception (2013), at BSI retreat, Karuizawa, 2013; at SFN, San Diego, November;at Neuro2013, Kyoto, Japan, June 22th. At Cosyne 2013, Salt Lake city, Utah, February 8th - March 3).  
+				</li>		
+				<li>Kaveri S, Koene A, <strong><span style="color:#C70039;">Laquitaine S.</span></strong>, Nakahara H (2012) Sign-tracking and goal-tracking by a reinforcement learning model. Conference abstract at The 42nd Annual Meeting of the Society for Neuroscience, New Orleans, LA, USA, October 13-17, 2012   
+				</li>						
+				<li><strong><span style="color:#C70039;">Laquitaine S.</span></strong>, Loewenstein Y., Gross C., Hansel D., Boraud T. Learning behaviour in a two alternative decision task in primate follows a linear single free parameter probability matching law. 9th colloquium of Société des Neurosciences, Bordeaux, France, 2009. 
+				</li>						
+				<li><strong><span style="color:#C70039;">Laquitaine S.</span></strong>, Loewenstein Y., Boraud T. Learning of the two-armed bandit reward schedule by primates reveals complex choice strategies underlying different neural activity patterns. Society for Neuroscience, October, 2009 
+				</li>	
+				<li>Chetrit J., Ballion B., <strong><span style="color:#C70039;">Laquitaine S.</span></strong>, Belujon P., Morin S., Gonon F., Taupignon A., Bioulac B., Gross C.E. and Benazzouz A. Hypokinesia and catalepsy induced by flupentixol are correlated with changes in neuronal activities of the basal ganglia. Society for Neuroscience, Washington, Nov. 15-19, 2008. 
+				</li>	
+				<li>Delcasso S., De Rivoyre J., <strong><span style="color:#C70039;">Laquitaine S.</span></strong>, Jeantet Y., Cho H.Y. The use of an operant DRL schedule for longitudinal studies of APP transgenic mice. Society For Neuroscience, Atlanta, 2006.
+				</li>						
+			</ul>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
