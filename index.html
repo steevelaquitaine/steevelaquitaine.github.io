@@ -1,42 +1,236 @@
-<!-- Hero / sidebar -->
+<!DOCTYPE HTML>
+<html>
 
-<h1>Steeve Laquitaine, PhD</h1>
+<head>
+	<title>Strata by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	
+	<!-- Add font awesomes -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<p>
-  <strong>AI Research Scientist &amp; Computational Neuroscientist</strong><br>
-  Sorbonne Université · Paris Vision Institute<br>
-  Stanford University Affiliate · Formerly EPFL
-</p>
+	<!-- Add academicons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+</head>
 
-<p>
-  I study how biological and artificial neural networks represent visual information, learn its statistical structure, and use it for efficient inference and decision-making.
-</p>
 
-<!-- Main content -->
 
-<section id="research">
-  <h1>Research</h1>
 
-  <p>
-    My research lies at the intersection of artificial intelligence, computational neuroscience, and statistical inference. I develop mathematical and machine-learning models to uncover the computational principles that enable intelligent systems to make flexible, robust decisions under uncertainty and limited resources.
-  </p>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
-  <p>
-    I connect these models with large-scale neural recordings and behavioral experiments, using insights from biological intelligence to inform the design and interpretation of artificial neural networks.
-  </p>
+  /* Navigation container */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-  <p>
-    <strong>Current focus:</strong> How do biological and artificial neural networks encode visual inputs and their statistical structure to support efficient inference?
-  </p>
+  /* Hamburger icon */
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+    display: block;
+  }
 
-  <p>
-    <strong>Background:</strong> I am currently a postdoctoral researcher in Matthew Chalk’s lab at the Paris Vision Institute. Previously, I held postdoctoral positions with Henry Markram and Michael Reimann at the Blue Brain Project, EPFL, and with Justin Gardner at Stanford University. I also worked in industry as a Lead Data Scientist, developing and deploying scalable machine-learning systems.
-  </p>
+  /* Nav links (hidden by default) */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
 
-  <ul class="actions">
-    <li><a href="research.html" class="button">Explore my research</a></li>
-    <li><a href="publications.html" class="button">View publications</a></li>
-    <li><a href="software.html" class="button">Browse software</a></li>
-    <li><a href="cv" class="button">My curriculum </a></li>
-  </ul>
-</section>
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-link:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none; /* hide hamburger on desktop */
+    }
+
+    .nav-links {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      border: none;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      border: none;
+      padding: 0;
+    }
+
+    .nav-link:hover {
+      background: none;
+      color: #007acc;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+  <div class="nav-links" id="nav-links">
+    <a href="research.html" class="nav-link">Research</a>
+    <a href="publications.html" class="nav-link">Publications</a>
+    <a href="teaching.html" class="nav-link">Teaching</a>
+    <a href="software.html" class="nav-link">Software</a>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById('menu-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('active');
+    });
+  });
+</script>
+
+
+
+
+
+	
+<!-- Navigation bar 
+<nav class="main-nav">
+  <div class="menu-toggle" id="menu-toggle">
+	☰
+  </div>
+  <div class="nav-links" id="nav-links">
+	<a href="research.html" class="nav-link">Research</a>
+	<a href="publications.html" class="nav-link">Publications</a>
+	<a href="teaching.html" class="nav-link">Teaching</a>
+	<a href="software.html" class="nav-link">Software</a>
+  </div>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('active');
+  });
+});
+</script>
+-->
+
+
+
+
+	
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+	
+	
+	
+				
+			<!--  profile picture -->
+			<a href="#" class="image avatar"><img src="images/profile_pic.jpg" alt="" /></a>
+    
+    <h1>Steeve Laquitaine, PhD</h1>
+    
+    <p>
+      <strong>AI Research Scientist &amp; Computational Neuroscientist</strong><br>
+      Sorbonne Université · Paris Vision Institute<br>
+      Stanford University Affiliate · Formerly EPFL
+    </p>
+    
+    <p>
+      I study how biological and artificial neural networks represent visual information, learn its statistical structure, and use it for efficient inference and decision-making.
+    </p>
+    
+    <!-- Main content -->
+    
+    <section id="research">
+      <h1>Research</h1>
+    
+      <p>
+        My research lies at the intersection of artificial intelligence, computational neuroscience, and statistical inference. I develop mathematical and machine-learning models to uncover the computational principles that enable intelligent systems to make flexible, robust decisions under uncertainty and limited resources.
+      </p>
+    
+      <p>
+        I connect these models with large-scale neural recordings and behavioral experiments, using insights from biological intelligence to inform the design and interpretation of artificial neural networks.
+      </p>
+    
+      <p>
+        <strong>Current focus:</strong> How do biological and artificial neural networks encode visual inputs and their statistical structure to support efficient inference?
+      </p>
+    
+      <p>
+        <strong>Background:</strong> I am currently a postdoctoral researcher in Matthew Chalk’s lab at the Paris Vision Institute. Previously, I held postdoctoral positions with Henry Markram and Michael Reimann at the Blue Brain Project, EPFL, and with Justin Gardner at Stanford University. I also worked in industry as a Lead Data Scientist, developing and deploying scalable machine-learning systems.
+      </p>
+    
+      <ul class="actions">
+        <li><a href="research.html" class="button">Explore my research</a></li>
+        <li><a href="publications.html" class="button">View publications</a></li>
+        <li><a href="software.html" class="button">Browse software</a></li>
+        <li><a href="cv" class="button">My curriculum </a></li>
+      </ul>
+    </section>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
