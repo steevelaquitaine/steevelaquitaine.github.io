@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html>
+
+
+<!-- Header ----------------------------------------------------------------------------------->
+	
+<head>
+	<title>Strata by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	
+	<!-- Add font awesomes -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Add academicons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+</head>
+	
+<!-- Header ----------------------------------------------------------------------------------->
+
+
+
+<!------------------------------------------------------------------------------------->
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Navigation container */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Hamburger icon */
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+    display: block;
+  }
+
+  /* Nav links (hidden by default) */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-link:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none; /* hide hamburger on desktop */
+    }
+
+    .nav-links {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      border: none;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      border: none;
+      padding: 0;
+    }
+
+    .nav-link:hover {
+      background: none;
+      color: #007acc;
+    }
+  }
+</style>
+<link rel="stylesheet" href="assets/css/theme.css" />
+<link rel="stylesheet" href="assets/css/software.css" />
+<script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+
+<!-- Header ----------------------------------------------------------------------------------->	
+	
+<nav class="main-nav">
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+  <div class="nav-links" id="nav-links">
+    <a href="home.html" class="nav-link">Home</a>
+    <a href="publications.html" class="nav-link">Publications</a>
+    <a href="teaching.html" class="nav-link">Teaching</a>
+    <a href="software.html" class="nav-link">Software</a>
+  </div>
+</nav>
+	
+<!------------------------------------------------------------------------------------->
+
+
+
+	
+<!------------------------------------------------------------------------------------->	
+	
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById('menu-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('active');
+    });
+  });
+</script>
+	
+<!------------------------------------------------------------------------------------->	
+
+
+
+	
+<!------------------------------------------------------------------------------------->
+	
+<body class="is-preload">
+
+	<!-- Header -->
+	
+	<header id="header">
+	
+		<div class="inner">
+	
+			<!--  profile picture -->
+			<a href="#" class="image avatar"><img src="images/profile_pic.jpg" alt="" /></a>
+
+			<!--  position -->
+			<h1>Steeve Laquitaine, PhD</h1>
+
+			<!--  Job -->
+			<p>Postdoc at <span style="color:#C70039;">Sorbonne Universite, Paris Vision Institute</span> & Affiliate at <span style="color:#C70039;">Stanford University </span>, ex-<span style="color:#C70039;">EPFL</span> </p>
+			
+			<!--  pitch -->
+			<p>I study efficient inference & decision-making in biological & artificial neural networks. I use mathematical theory, computational models to link large-scale neural recordings and psychophysics.</p>
+	
+			<!-- mail -->
+			<!-- <li-social><a href="mailto:laquitainesteeve@gmail.fr"><i class="fa fa-fw fa-envelope-square ai-1x" aria-hidden="true"></i> Mail</a></li-social> -->
+			<li-social><a href="mailto:laquitainesteeve@gmail.com"><i class="fa fa-fw fa-envelope-square ai-1x" aria-hidden="true"></i>Mail</a></li-social>
+			
+			<!-- twitter icon -->
+			<li-social><a href="https://twitter.com/sl_neuro"><i class="fa fa-fw fa-twitter-square ai-1x" aria-hidden="true"></i> Twitter</a></li-social>
+			
+			<!-- linkedin icon -->
+			<li-social><a href="https://www.linkedin.com/in/steevelaquitaine"><i class="fa fa-fw fa-linkedin-square ai-1x" aria-hidden="true"></i> Linkedin</a></li-social>
+
+			<!-- google scholar -->
+			<li-social><a href="https://scholar.google.com/citations?user=ftTg_S4AAAAJ&hl=fr&oi=ao"><i class="ai ai-google-scholar-square ai-1x" aria-hidden="true"></i> Google scholar</a></li-social>
+
+			<!-- orcid icon -->
+			<li-social><a href="https://orcid.org/0000-0002-9647-3149"><i class="fab fa-fw fa-orcid ai-1x" aria-hidden="true"></i> Orcid</a></li-social>
+
+			<!-- Github icon -->
+			<li-social><a href="https://github.com/steevelaquitaine"><i class="fab fa-fw fa-github ai-1x" aria-hidden="true"></i> Github</a></li-social>
+
+			<!-- Teaching icon -->
+			<li-social><a href="https://steevelaquitaine.github.io/teaching_statement.html"><i class="ai ai-google-scholar-square ai-1x" aria-hidden="true"></i> Teaching Statement</a></li-social>
+		
+		</div>
+		
+	</header>
+	<!-- Header -->
+	
+	
+	<!-- Main -->
+	<div id="main">
+
+	<section id="software">
+
+		<div class="sw-head">
+			<h1>My Software</h1>
+			<div class="sw-arrows">
+				<button class="sw-arrow" id="sw-prev" type="button" aria-label="Previous software">&#8592;</button>
+				<button class="sw-arrow" id="sw-next" type="button" aria-label="Next software">&#8594;</button>
+			</div>
+		</div>
+
+		<div class="sw-track" id="sw-track" tabindex="0" aria-label="Software carousel">
+
+			<!-- multigeom -->
+			<article class="sw-card">
+				<div class="sw-media multigeom"><img src="images/software/multigeom_logo.png" alt="multigeom logo" /></div>
+				<div class="sw-body">
+					<span class="sw-tag">Python package</span>
+					<h2>multigeom</h2>
+					<p>Multi-scale information geometry of neural population codes. It computes the Fisher information metric of any fitted PyTorch encoder, and its multi-scale version estimated with conditional diffusion models.</p>
+					<div class="sw-links">
+						<a class="sw-btn primary" href="https://multigeom.github.io">Landing page</a>
+						<a class="sw-btn" href="https://multigeom.github.io/multigeom/">Documentation</a>
+						<a class="sw-btn" href="https://github.com/multigeom/multigeom-tutorials">Tutorials</a>
+						<a class="sw-btn" href="https://pypi.org/project/multigeom/">PyPI</a>
+						<a class="sw-btn" href="https://arxiv.org/abs/2605.06304">Paper</a>
+					</div>
+				</div>
+			</article>
+
+			<!-- spikecurate -->
+			<article class="sw-card">
+				<div class="sw-media spikecurate">
+					<svg viewBox="0 0 360 140" role="img" aria-label="Spike waveforms">
+						<g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="10,70 50,70 62,20 74,118 88,70 130,70" />
+							<polyline points="130,70 160,70 170,38 180,104 190,70 230,70" opacity=".7" />
+							<polyline points="230,70 262,70 272,12 284,124 298,70 350,70" />
+						</g>
+					</svg>
+				</div>
+				<div class="sw-body">
+					<span class="sw-tag">Python package</span>
+					<h2>spikecurate</h2>
+					<p>Curates single units recorded with dense probes from SpikeInterface extractors. A classifier trained on quality metrics separates well-sorted from poorly-sorted units.</p>
+					<div class="sw-links">
+						<a class="sw-btn primary" href="https://pypi.org/project/spikecurate/">PyPI</a>
+						<a class="sw-btn" href="https://steevelaquitaine.github.io/spikecurate/">Documentation</a>
+						<a class="sw-btn" href="https://github.com/steevelaquitaine/spikecurate">GitHub</a>
+						<a class="sw-btn" href="https://doi.org/10.1101/2024.12.04.626805">Paper</a>
+					</div>
+				</div>
+			</article>
+
+		</div>
+
+	</section>
+
+	</div>
+
+	<script>
+		(function () {
+			var track = document.getElementById("sw-track");
+			var prev = document.getElementById("sw-prev");
+			var next = document.getElementById("sw-next");
+			function step() { var c = track.querySelector(".sw-card"); return c.offsetWidth + 24; }
+			function update() {
+				prev.disabled = track.scrollLeft < 4;
+				next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+			}
+			prev.addEventListener("click", function () { track.scrollBy({ left: -step() }); });
+			next.addEventListener("click", function () { track.scrollBy({ left: step() }); });
+			track.addEventListener("scroll", update);
+			window.addEventListener("resize", update);
+			update();
+		})();
+	</script>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+<!------------------------------------------------------------------------------------->
+	
+</html>
+
+
+
+
+
+
+
+
+
+
