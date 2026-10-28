@@ -28,7 +28,7 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="dark"] .theme-toggle {
-  background: #20232a;
+  background: #14161a;
   color: #e6e6e6;
   border-color: #3a3d44;
 }
@@ -38,7 +38,7 @@ html[data-theme="dark"] body,
 html[data-theme="dark"] #wrapper,
 html[data-theme="dark"] #main,
 html[data-theme="dark"] #header {
-  background: #16181d;
+  background: #0b0c0f;
 }
 
 html[data-theme="dark"] body,
@@ -82,12 +82,12 @@ html[data-theme="dark"] table tbody tr:nth-child(2n + 1),
 html[data-theme="dark"] blockquote,
 html[data-theme="dark"] code,
 html[data-theme="dark"] pre {
-  background-color: #20232a;
+  background-color: #14161a;
 }
 
 /* Navigation bar (inline styles in each page) */
 html[data-theme="dark"] .main-nav {
-  background-color: #20232a;
+  background-color: #14161a;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
@@ -96,7 +96,7 @@ html[data-theme="dark"] .menu-toggle {
 }
 
 html[data-theme="dark"] .nav-links {
-  background: #20232a;
+  background: #14161a;
   border-top-color: #3a3d44;
 }
 
@@ -106,7 +106,7 @@ html[data-theme="dark"] .nav-link {
 }
 
 html[data-theme="dark"] .nav-link:hover {
-  background-color: #2a2d33;
+  background-color: #1b1e23;
 }
 
 @media (min-width: 768px) {
@@ -124,7 +124,7 @@ html[data-theme="dark"] body.statement * {
 }
 
 html[data-theme="dark"] body.statement {
-  background: #16181d !important;
+  background: #0b0c0f !important;
 }
 
 html[data-theme="dark"] body.statement a,

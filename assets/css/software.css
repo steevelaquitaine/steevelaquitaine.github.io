@@ -9,12 +9,12 @@
 }
 
 html[data-theme="dark"] {
-  --sw-card: #20232a;
+  --sw-card: #14161a;
   --sw-line: #3a3d44;
   --sw-ink: #e6e6e6;
   --sw-muted: #a3a8b3;
   --sw-accent: #6fc3df;
-  --sw-chip: #2a2d33;
+  --sw-chip: #1b1e23;
 }
 
 .sw-head {
