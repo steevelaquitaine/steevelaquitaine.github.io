@@ -205,10 +205,6 @@
 
 		<div class="sw-head">
 			<h1>My Software</h1>
-			<div class="sw-arrows">
-				<button class="sw-arrow" id="sw-prev" type="button" aria-label="Previous software">&#8592;</button>
-				<button class="sw-arrow" id="sw-next" type="button" aria-label="Next software">&#8594;</button>
-			</div>
 		</div>
 
 		<div class="sw-track" id="sw-track" tabindex="0" aria-label="Software carousel">
@@ -216,17 +212,14 @@
 			<!-- multigeom -->
 			<article class="sw-card">
 				<div class="sw-media multigeom"><img src="images/software/multigeom_logo.png" alt="multigeom logo" /></div>
-				<div class="sw-body">
-					<span class="sw-tag">Python package</span>
-					<h2>multigeom</h2>
-					<p>Multi-scale information geometry of neural population codes. It computes the Fisher information metric of any fitted PyTorch encoder, and its multi-scale version estimated with conditional diffusion models.</p>
-					<div class="sw-links">
-						<a class="sw-btn primary" href="https://multigeom.github.io">Landing page</a>
-						<a class="sw-btn" href="https://multigeom.github.io/multigeom/">Documentation</a>
-						<a class="sw-btn" href="https://github.com/multigeom/multigeom-tutorials">Tutorials</a>
-						<a class="sw-btn" href="https://pypi.org/project/multigeom/">PyPI</a>
-						<a class="sw-btn" href="https://arxiv.org/abs/2605.06304">Paper</a>
-					</div>
+				<h2>multigeom</h2>
+				<p>Multi-scale information geometry of neural population codes, from the Fisher information of any PyTorch encoder to its diffusion-based multi-scale version.</p>
+				<div class="sw-links">
+					<a class="sw-link primary" href="https://multigeom.github.io">Landing page</a>
+					<a class="sw-link" href="https://multigeom.github.io/multigeom/">Documentation</a>
+					<a class="sw-link" href="https://github.com/multigeom/multigeom-tutorials">Tutorials</a>
+					<a class="sw-link" href="https://pypi.org/project/multigeom/">PyPI</a>
+					<a class="sw-link" href="https://arxiv.org/abs/2605.06304">Paper</a>
 				</div>
 			</article>
 
@@ -234,26 +227,28 @@
 			<article class="sw-card">
 				<div class="sw-media spikecurate">
 					<svg viewBox="0 0 360 140" role="img" aria-label="Spike waveforms">
-						<g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+						<g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
 							<polyline points="10,70 50,70 62,20 74,118 88,70 130,70" />
 							<polyline points="130,70 160,70 170,38 180,104 190,70 230,70" opacity=".7" />
 							<polyline points="230,70 262,70 272,12 284,124 298,70 350,70" />
 						</g>
 					</svg>
 				</div>
-				<div class="sw-body">
-					<span class="sw-tag">Python package</span>
-					<h2>spikecurate</h2>
-					<p>Curates single units recorded with dense probes from SpikeInterface extractors. A classifier trained on quality metrics separates well-sorted from poorly-sorted units.</p>
-					<div class="sw-links">
-						<a class="sw-btn primary" href="https://pypi.org/project/spikecurate/">PyPI</a>
-						<a class="sw-btn" href="https://steevelaquitaine.github.io/spikecurate/">Documentation</a>
-						<a class="sw-btn" href="https://github.com/steevelaquitaine/spikecurate">GitHub</a>
-						<a class="sw-btn" href="https://doi.org/10.1101/2024.12.04.626805">Paper</a>
-					</div>
+				<h2>spikecurate</h2>
+				<p>Curate single units recorded with dense probes from SpikeInterface extractors, using a classifier trained on quality metrics.</p>
+				<div class="sw-links">
+					<a class="sw-link primary" href="https://pypi.org/project/spikecurate/">PyPI</a>
+					<a class="sw-link" href="https://steevelaquitaine.github.io/spikecurate/">Documentation</a>
+					<a class="sw-link" href="https://github.com/steevelaquitaine/spikecurate">GitHub</a>
+					<a class="sw-link" href="https://doi.org/10.1101/2024.12.04.626805">Paper</a>
 				</div>
 			</article>
 
+		</div>
+
+		<div class="sw-arrows">
+			<button class="sw-arrow" id="sw-prev" type="button" aria-label="Previous software">&#8249;</button>
+			<button class="sw-arrow" id="sw-next" type="button" aria-label="Next software">&#8250;</button>
 		</div>
 
 	</section>
@@ -265,7 +260,7 @@
 			var track = document.getElementById("sw-track");
 			var prev = document.getElementById("sw-prev");
 			var next = document.getElementById("sw-next");
-			function step() { var c = track.querySelector(".sw-card"); return c.offsetWidth + 24; }
+			function step() { var c = track.querySelector(".sw-card"); return c.offsetWidth + parseFloat(getComputedStyle(track).columnGap || 48); }
 			function update() {
 				prev.disabled = track.scrollLeft < 4;
 				next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
