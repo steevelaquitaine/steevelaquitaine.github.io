@@ -5,6 +5,8 @@
   --sw-muted: #5d5d66;
   --sw-accent: #369aae;
   --sw-pill: #f1f3f5;
+  --sw-hover: linear-gradient(180deg, #f6f7f9 0%, #e9ecef 100%);
+  --sw-hover-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
 }
 
 html[data-theme="dark"] {
@@ -12,6 +14,8 @@ html[data-theme="dark"] {
   --sw-muted: #a3a8b3;
   --sw-accent: #6fc3df;
   --sw-pill: #1b1e23;
+  --sw-hover: radial-gradient(120% 75% at 50% 0%, #4a4e57 0%, #2c3037 55%, #23262c 100%);
+  --sw-hover-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
 }
 
 #software {
@@ -34,7 +38,9 @@ html body #software .sw-head h1 {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 4px 2px 8px;
+  padding: 30px;
+  margin: -30px;
+  scroll-padding-left: 30px;
   scrollbar-width: none;
 }
 
@@ -49,6 +55,7 @@ html body #software .sw-head h1 {
 }
 
 .sw-media {
+  position: relative;
   aspect-ratio: 16 / 9;
   border-radius: 24px;
   overflow: hidden;
@@ -60,8 +67,64 @@ html body #software .sw-head h1 {
 
 .sw-media.multigeom { background: #000 url("../../images/multigeom_card.jpeg") center 55% / cover no-repeat; }
 .sw-media.spikecurate { background: linear-gradient(135deg, #12304a 0%, #1f6f8b 55%, #6fc3df 100%); }
+.sw-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transition: transform .5s ease;
+}
+
+.sw-media > * { position: relative; }
 .sw-media img { max-height: 100%; max-width: 100%; width: auto; border: 0; }
 .sw-media svg { width: 100%; max-width: 280px; height: auto; }
+
+.sw-card { position: relative; cursor: pointer; isolation: isolate; transition: transform .35s ease; }
+
+/* Hover panel behind the card: a soft grey in dark mode, as if lit from above */
+.sw-card::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  z-index: -1;
+  border-radius: 36px;
+  background: var(--sw-hover);
+  box-shadow: var(--sw-hover-shadow);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.sw-card:hover,
+.sw-card:focus-within { transform: translateY(-4px); }
+
+.sw-card:hover::before,
+.sw-card:focus-within::before { opacity: 1; }
+
+/* The whole card is one link: the title link stretches over it, the other links sit above */
+html body .sw-card h2 a.sw-main {
+  border: 0;
+  color: inherit;
+}
+
+.sw-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.sw-links { position: relative; z-index: 2; }
+
+.sw-card:hover .sw-media::before,
+.sw-card:focus-within .sw-media::before { transform: scale(1.1); }
+
+.sw-card:hover .sw-media svg { transform: scale(1.08); }
+.sw-media svg { transition: transform .5s ease; }
+
+html body .sw-card:hover h2 a.sw-main { color: var(--sw-accent); }
+
+.sw-main:focus-visible { outline: none; }
+.sw-main:focus-visible::after { outline: 2px solid var(--sw-accent); outline-offset: 4px; border-radius: 24px; }
 
 .sw-card h2 {
   margin: 20px 0 4px;
@@ -120,4 +183,5 @@ html body .sw-card a.sw-link.primary { color: var(--sw-ink); font-weight: 600; }
 
 @media (prefers-reduced-motion: reduce) {
   .sw-track { scroll-behavior: auto; }
+  .sw-media::before, .sw-media svg, .sw-card, .sw-card::before { transition: none; }
 }
