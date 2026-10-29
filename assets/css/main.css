@@ -2155,6 +2155,9 @@ input, select, textarea {
 				width: 100%;          /* fill the container width */
 				height: auto;         /* keep the aspect ratio */
 				border-radius: 12px;  /* rounded corners, adjust as needed */
+				aspect-ratio: 672 / 640;  /* crop the bottom: the photo ends at the base of the neck */
+				object-fit: cover;
+				object-position: top;
 			}
 
 /* List */
@@ -3387,3 +3390,30 @@ input, select, textarea {
 }	
 }
 
+
+/* Pages without the profile sidebar: content uses the full width, centred */
+body.no-sidebar #main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 62em;
+}
+
+/* Icon-only social links in the sidebar */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 1.5em;
+}
+
+.social-icons a {
+  border: 0;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Half the gap between the affiliation line and the pitch */
+#header .inner h1 + p {
+  margin-bottom: 1em;
+}
