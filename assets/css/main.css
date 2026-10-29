@@ -3417,3 +3417,10 @@ body.no-sidebar #main {
 #header .inner h1 + p {
   margin-bottom: 1em;
 }
+
+/* Phones: the fixed top band (menu + theme toggle) is about 48px tall; keep titles clear of it */
+@media screen and (max-width: 736px) {
+  body.no-sidebar #main {
+    padding-top: 76px;
+  }
+}
