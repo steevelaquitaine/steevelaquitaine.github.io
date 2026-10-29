@@ -67,19 +67,11 @@ html body #software .sw-head h1 {
 
 .sw-media.multigeom { background: #000 url("../../images/multigeom_card.jpeg") center 55% / cover no-repeat; }
 .sw-media.spikecurate { background: linear-gradient(135deg, #12304a 0%, #1f6f8b 55%, #6fc3df 100%); }
-.sw-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  transition: transform .5s ease;
-}
-
 .sw-media > * { position: relative; }
 .sw-media img { max-height: 100%; max-width: 100%; width: auto; border: 0; }
 .sw-media svg { width: 100%; max-width: 280px; height: auto; }
 
-.sw-card { position: relative; cursor: pointer; isolation: isolate; transition: transform .35s ease; }
+.sw-card { position: relative; cursor: pointer; isolation: isolate; }
 
 /* Hover panel behind the card: a soft grey in dark mode, as if lit from above */
 .sw-card::before {
@@ -93,9 +85,6 @@ html body #software .sw-head h1 {
   opacity: 0;
   transition: opacity .35s ease;
 }
-
-.sw-card:hover,
-.sw-card:focus-within { transform: translateY(-4px); }
 
 .sw-card:hover::before,
 .sw-card:focus-within::before { opacity: 1; }
@@ -114,12 +103,6 @@ html body .sw-card h2 a.sw-main {
 }
 
 .sw-links { position: relative; z-index: 2; }
-
-.sw-card:hover .sw-media::before,
-.sw-card:focus-within .sw-media::before { transform: scale(1.1); }
-
-.sw-card:hover .sw-media svg { transform: scale(1.08); }
-.sw-media svg { transition: transform .5s ease; }
 
 html body .sw-card:hover h2 a.sw-main { color: var(--sw-accent); }
 
@@ -183,5 +166,5 @@ html body .sw-card a.sw-link.primary { color: var(--sw-ink); font-weight: 600; }
 
 @media (prefers-reduced-motion: reduce) {
   .sw-track { scroll-behavior: auto; }
-  .sw-media::before, .sw-media svg, .sw-card, .sw-card::before { transition: none; }
+  .sw-card::before { transition: none; }
 }
