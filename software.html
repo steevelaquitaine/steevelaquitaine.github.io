@@ -1,175 +1,45 @@
-<!DOCTYPE HTML>
-<html>
-
-
-<!-- Header ----------------------------------------------------------------------------------->
-	
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Strata by HTML5 UP</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	
-	<!-- Add font awesomes -->
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-	<!-- Add academicons -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-</head>
-	
-<!-- Header ----------------------------------------------------------------------------------->
-
-
-
-<!------------------------------------------------------------------------------------->
-
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  /* Navigation container */
-  .main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding: 10px 15px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  /* Hamburger icon */
-  .menu-toggle {
-    font-size: 1.8rem;
-    cursor: pointer;
-    user-select: none;
-    display: block;
-  }
-
-  /* Nav links (hidden by default) */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    border-top: 1px solid #eee;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 12px 20px;
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .nav-link:hover {
-    background-color: #f9f9f9;
-  }
-
-  /* Desktop layout */
-  @media (min-width: 768px) {
-    .menu-toggle {
-      display: none; /* hide hamburger on desktop */
-    }
-
-    .nav-links {
-      display: flex !important;
-      flex-direction: row;
-      position: static;
-      width: auto;
-      border: none;
-      gap: 2rem;
-    }
-
-    .nav-link {
-      border: none;
-      padding: 0;
-    }
-
-    .nav-link:hover {
-      background: none;
-      color: #007acc;
-    }
-  }
-</style>
-<link rel="stylesheet" href="assets/css/theme.css" />
-<link rel="stylesheet" href="assets/css/software-menu.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Google+Sans+Text:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/software.css" />
-<script src="assets/js/theme.js"></script>
-<script src="assets/js/software-menu.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Software · Steeve Laquitaine</title>
+	<meta name="description" content="Open-source Python packages by Steeve Laquitaine: multigeom, spikebias and spikecurate." />
+	<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Google+Sans+Text:wght@400;500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/site.css" />
+	<link rel="stylesheet" href="assets/css/software.css" />
+	<link rel="stylesheet" href="assets/css/software-menu.css" />
+	<script src="assets/js/theme.js"></script>
+	<script src="assets/js/software-menu.js"></script>
+	<script src="assets/js/site.js"></script>
 </head>
 <body>
 
-
-<!-- Header ----------------------------------------------------------------------------------->	
-	
-<nav class="main-nav">
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-  <div class="nav-links" id="nav-links">
-    <a href="home.html" class="nav-link">Home</a>
-    <a href="publications.html" class="nav-link">Publications</a>
-    <a href="teaching.html" class="nav-link">Teaching</a>
-    <a href="software.html" class="nav-link">Software</a>
-  </div>
+<nav class="main-nav" aria-label="Main">
+	<a class="brand" href="index.html">Steeve Laquitaine</a>
+	<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+	<div class="nav-links" id="nav-links">
+		<a href="research.html" class="nav-link">Research</a>
+		<a href="publications.html" class="nav-link">Publications</a>
+		<a href="software.html" class="nav-link" aria-current="page">Software</a>
+		<a href="teaching.html" class="nav-link">Teaching</a>
+	</div>
 </nav>
-	
-<!------------------------------------------------------------------------------------->
 
+<main>
 
-
-	
-<!------------------------------------------------------------------------------------->	
-	
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.getElementById('menu-toggle');
-    const links = document.getElementById('nav-links');
-
-    toggle.addEventListener('click', function() {
-      links.classList.toggle('active');
-    });
-  });
-</script>
-	
-<!------------------------------------------------------------------------------------->	
-
-
-
-	
-<!------------------------------------------------------------------------------------->
-	
-<body class="is-preload no-sidebar">
-
-	<!-- Header -->
-	
-	<!-- Header -->
-	
-	
-	<!-- Main -->
-	<div id="main">
-
-	<section id="software">
-
-		<div class="sw-head">
-			<h1>Interpret neural network representations</h1>
+	<header class="page-head">
+		<div class="wrap">
+			<h1>Research software</h1>
+			<p>Open-source Python packages that turn the methods of my papers into tools: measure what neural populations encode, and how spike sorting biases what we record.</p>
 		</div>
+	</header>
+
+	<div class="wrap">
+	<section id="software" aria-label="Software">
 
 		<div class="sw-track" id="sw-track" tabindex="0" aria-label="Software carousel">
 
@@ -222,8 +92,21 @@
 		</div>
 
 	</section>
-
 	</div>
+
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<span>© 2026 Steeve Laquitaine · Paris</span>
+		<nav aria-label="Footer">
+			<a href="mailto:laquitainesteeve@gmail.com">Email</a>
+			<a href="https://scholar.google.com/citations?user=ftTg_S4AAAAJ">Google Scholar</a>
+			<a href="https://github.com/steevelaquitaine">GitHub</a>
+			<a href="https://www.linkedin.com/in/steevelaquitaine">LinkedIn</a>
+		</nav>
+	</div>
+</footer>
 
 	<script>
 		(function () {
@@ -243,26 +126,5 @@
 		})();
 	</script>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
 </body>
-
-<!------------------------------------------------------------------------------------->
-	
 </html>
-
-
-
-
-
-
-
-
-
-
