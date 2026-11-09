@@ -1,0 +1,201 @@
+/* Software flyout under the "Software" nav link (built by assets/js/software-menu.js).
+   Modelled on the Models menu of deepmind.google: a floating panel with an intro row,
+   then columns of links with a 48 px icon, a name and a one-line description. */
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Google+Sans+Text:wght@400;500&display=swap");
+
+:root {
+  --swm-ink: #121317;
+  --swm-muted: #45474d;
+  --swm-accent: #007acc;
+  --swm-surface: #fff;
+  --swm-outline: rgba(33, 34, 38, 0.12);
+  --swm-hover: #f1f3f5;
+  --swm-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] {
+  --swm-ink: #e6e6e6;
+  --swm-muted: #a3a8b3;
+  --swm-accent: #6fc3df;
+  --swm-surface: #14161a;
+  --swm-outline: rgba(255, 255, 255, 0.12);
+  --swm-hover: #23262c;
+  --swm-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Phones use the hamburger list: the Software link goes straight to the page */
+.swm-flyout { display: none; }
+
+@media (min-width: 768px) {
+  html body .nav-menu.open > .nav-link { color: var(--swm-accent); }
+
+  /* The transparent top padding bridges the gap between the link and the panel */
+  .swm-flyout {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -24px;
+    padding-top: 20px;
+    visibility: hidden;
+    transition: visibility 0s linear .1s;
+  }
+
+  .nav-menu.open > .swm-flyout {
+    visibility: visible;
+    transition: visibility 0s;
+  }
+
+  .swm-panel {
+    opacity: 0;
+    transform: scale(0.98);
+    transform-origin: top left;
+    transition: opacity .1s cubic-bezier(0.16, 1, 0.3, 1), transform .1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-menu.open .swm-panel {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .25s cubic-bezier(0.16, 1, 0.3, 1), transform .25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+.swm-panel {
+  box-sizing: border-box;
+  padding: 24px;
+  border: 1px solid var(--swm-outline);
+  border-radius: 24px;
+  background: var(--swm-surface);
+  box-shadow: var(--swm-shadow);
+  font-family: "Google Sans Text", "Google Sans", Roboto, Arial, sans-serif;
+  color: var(--swm-ink);
+}
+
+.swm-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+html body .swm-title {
+  margin: 0;
+  font-family: "Google Sans", "Google Sans Text", Roboto, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--swm-ink);
+}
+
+html body .main-nav a.swm-all {
+  flex: 0 0 auto;
+  border: 1px solid var(--swm-outline);
+  border-radius: 99px;
+  padding: 5px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--swm-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.swm-all::after { content: "\203A"; margin-left: 6px; }
+
+html body .main-nav a.swm-all:hover {
+  border-color: var(--swm-accent);
+  color: var(--swm-ink) !important;
+}
+
+/* One column on narrow screens, two from 1024 px */
+.swm-columns {
+  display: grid;
+  grid-template-columns: 280px;
+  gap: 24px;
+}
+
+@media (max-width: 1023px) {
+  .swm-intro { flex-direction: column; gap: 12px; }
+  html body .swm-title { font-size: 20px; }
+}
+
+@media (min-width: 1024px) {
+  .swm-columns { grid-template-columns: repeat(2, 256px); gap: 36px; }
+}
+
+html body .swm-group {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--swm-muted);
+}
+
+html body .main-nav a.swm-link {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
+  border: 0;
+  text-decoration: none;
+}
+
+/* Hover pill that reaches a little past the icon and text */
+.swm-link::before {
+  content: "";
+  position: absolute;
+  inset: 0 -8px;
+  z-index: -1;
+  border-radius: 24px;
+  background: var(--swm-hover);
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+
+.swm-link:hover::before,
+.swm-link:focus-visible::before { opacity: 1; }
+
+html body .main-nav a.swm-link:focus-visible,
+html body .main-nav a.swm-all:focus-visible { outline: 2px solid var(--swm-accent); outline-offset: 2px; }
+
+.swm-icon {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--swm-outline);
+  border-radius: 16px;
+  background: #000;
+  object-fit: cover;
+}
+
+.swm-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.swm-name {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--swm-ink);
+}
+
+.swm-desc {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--swm-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swm-panel,
+  .nav-menu.open .swm-panel,
+  .swm-link::before { transition: none; }
+}
