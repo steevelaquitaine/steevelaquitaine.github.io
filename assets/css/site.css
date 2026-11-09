@@ -257,7 +257,7 @@ main { padding-top: var(--nav-h); }
   color: var(--ink);
 }
 
-.hero .copy p { max-width: 62ch; color: var(--muted); }
+.hero .affil { max-width: 62ch; margin: 0; font-size: 16px; color: var(--muted); }
 
 .hero-photo img {
   width: 100%;
@@ -286,16 +286,6 @@ main { padding-top: var(--nav-h); }
 .highlight .venue { font-family: var(--font-display); font-size: 20px; line-height: 1.3; color: var(--ink); }
 .highlight .what { margin-top: 6px; font-size: 15px; line-height: 1.45; color: var(--muted); }
 .highlight .who { margin-top: 6px; font-size: 13px; color: var(--faint); }
-
-/* Home: three ways of working */
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;
-}
-
-.pillar h3 { margin-bottom: 10px; font-size: 21px; line-height: 1.3; }
-.pillar p { margin: 0; font-size: 16px; color: var(--muted); }
 
 /* Cards with a 16:9 image, like the software cards */
 .cards {
@@ -375,8 +365,6 @@ main { padding-top: var(--nav-h); }
   line-height: 1.45;
   color: var(--ink);
 }
-
-.direction .statement-sub { max-width: 44em; font-size: 19px; color: var(--muted); }
 
 /* Inner pages */
 .page-head { padding: 72px 0 40px; }
@@ -543,7 +531,7 @@ main { padding-top: var(--nav-h); }
   .hero-photo img { width: 128px; aspect-ratio: 1; border-radius: 50%; object-position: 50% 20%; }
   .hero h1 { font-size: 40px; }
   .hero .lead { font-size: 22px; }
-  .pillars, .earlier { grid-template-columns: 1fr; gap: 28px; }
+  .earlier { grid-template-columns: 1fr; gap: 28px; }
   .panel { grid-template-columns: 1fr; gap: 28px; padding: 32px; }
   .story-grid { grid-template-columns: 1fr; gap: 36px; }
   .cites li, .story .cites li { grid-template-columns: 1fr; gap: 4px; }

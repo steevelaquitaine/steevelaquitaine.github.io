@@ -37,7 +37,7 @@
 	<header class="page-head">
 		<div class="wrap">
 			<h1>Selected research</h1>
-			<p>Three projects, each starting from an open question: state it precisely, develop a principled method, and build the experiment or simulation that tests it.</p>
+			<p>Three projects: an open question, a principled method, and the experiment that tests it.</p>
 			<div class="pills">
 				<a class="pill" href="#information">Measuring what neural networks encode</a>
 				<a class="pill" href="#inference">Mechanisms behind near-optimal behaviour</a>
@@ -57,36 +57,31 @@
 			<div class="figures">
 				<figure class="figure">
 					<div class="figure-frame"><img src="images/research/decomposition.webp" alt="Two handwritten digits, the Fisher information of a model population of visual neurons, which shows the grid of receptive fields, and the decomposition of mutual information, which traces the contours of each digit" width="1484" height="290" loading="lazy" /></div>
-					<figcaption>Pixel-wise information encoded by a simulated population of visual neurons about two digits <i>x</i>. Fisher information 𝒥(<i>x</i>) mostly reflects the neurons' receptive fields; our decomposition <i>I</i><sub>local</sub>(<i>x</i>) assigns the information to the contours of each digit. Laquitaine, Azeglio et al., NeurIPS 2025.</figcaption>
+					<figcaption>Information about two digits <i>x</i> encoded by simulated visual neurons. Fisher information 𝒥(<i>x</i>) mostly reflects receptive fields; our decomposition <i>I</i><sub>local</sub>(<i>x</i>) traces each digit's contours. NeurIPS 2025.</figcaption>
 				</figure>
 				<figure class="figure">
 					<div class="figure-frame"><img src="images/research/multiscale_geometry.webp" alt="Receptive fields of V1 and V4 recordings on a natural image, the leading stimulus directions of the multi-scale geometry, which are structured and differ between areas, and those of Fisher information, which look like noise" width="1687" height="416" loading="lazy" /></div>
-					<figcaption>Leading stimulus directions of the multi-scale information geometry (E) and of Fisher information (F) for macaque V1 and V4 populations viewing a natural image (D, receptive fields). The multi-scale directions are structured and differ between areas; the Fisher directions resemble high-frequency noise. Azeglio, Laquitaine et al., NeurIPS 2026.</figcaption>
+					<figcaption>Leading stimulus directions for macaque V1 and V4 (D, receptive fields): structured and area-specific for the multi-scale geometry (E), noise-like for Fisher information (F). NeurIPS 2026.</figcaption>
 				</figure>
 			</div>
 
 			<div class="story-grid">
 				<div class="story-body">
 					<div>
-						<p class="label">Problem</p>
-						<p>Mutual information measures how much a population encodes, not what it encodes. Splitting it into contributions from individual stimuli or features is ill-posed: infinitely many decompositions are possible, existing ones behave in qualitatively different ways, and most do not scale to high-dimensional stimuli.</p>
+						<p class="label">Approach</p>
+						<p>Mutual information says how much a population encodes, not what. We derived, from explicit axioms, a decomposition of it across stimuli and features, then a multi-scale information geometry exactly related to it. Both are estimated with diffusion models, so they scale to natural images.</p>
 					</div>
 					<div>
-						<p class="label">What we did</p>
-						<p>We stated axioms that a meaningful decomposition must satisfy, including additivity, positivity and locality, showed that existing decompositions violate at least one, and derived a decomposition that satisfies them all. It generalises Fisher information from infinitesimal to finite stimulus changes, splits further across features such as pixels, and is estimated with diffusion models, so it scales to naturalistic images.</p>
-						<p>We then showed that a unique multi-scale information geometry follows from first principles. It is exactly related to mutual information: it stretches well-encoded stimulus directions and contracts poorly encoded ones.</p>
-					</div>
-					<div>
-						<p class="label">What changed</p>
-						<p>Information can now be attributed to individual stimuli and features with explicit guarantees. On recordings from macaque V1 and V4, the leading directions of the geometry were interpretable, differed between areas and agreed across encoding models (Inception and ResNet). Those of Fisher information depended more on the encoding model than on the data, and became interpretable only with a much simpler, less predictive model.</p>
+						<p class="label">Result</p>
+						<p>Existing decompositions violate at least one axiom; ours satisfies them all. On macaque V1 and V4 recordings, the leading directions of the geometry were interpretable, differed between areas and agreed across encoding models, whereas those of Fisher information depended more on the model than on the data.</p>
 					</div>
 					<div>
 						<p class="label">Why it matters for AI</p>
-						<p>The methods apply to any encoder, biological or artificial. They give a principled way to ask which inputs and features contribute to the information a network represents, and they stay interpretable for high-performing deep networks.</p>
+						<p>The methods apply to any encoder, biological or artificial, and stay interpretable for high-performing deep networks.</p>
 					</div>
 					<div>
 						<p class="label">My contribution</p>
-						<p>Co-first author (equal contribution) of the NeurIPS 2025 paper and co-author of the NeurIPS 2026 oral. I developed <a href="https://multigeom.github.io">multigeom</a>, the Python package that implements the geometry and reproduces the paper's analyses.</p>
+						<p>Co-first author of the NeurIPS 2025 paper, co-author of the NeurIPS 2026 oral, and developer of <a href="https://multigeom.github.io">multigeom</a>.</p>
 					</div>
 				</div>
 
@@ -102,10 +97,10 @@ enc = multigeom.load_encoder(
 <span class="c"># image: [1, 1, 64, 64] in [-1, 1]</span>
 J = multigeom.compute_fisher(
     image, enc, sigma=0.22)</pre>
-						<p>Bring your own PyTorch encoder. Estimating the geometry trains a conditional diffusion model (about 68M parameters, about 30 A100-hours per configuration) and runs on local or serverless GPUs.</p>
+						<p>Works with any PyTorch encoder; trains a conditional diffusion model (about 68M parameters) on local or serverless GPUs.</p>
 						<ul class="link-list">
 							<li><a href="https://multigeom.github.io/multigeom/">multigeom documentation</a></li>
-							<li><a href="https://github.com/multigeom/multigeom-tutorials">Tutorials</a> <span>· from your own encoder to the paper's figures</span></li>
+							<li><a href="https://github.com/multigeom/multigeom-tutorials">Tutorials</a></li>
 							<li><a href="https://github.com/steevelaquitaine/ilocal">ilocal</a> <span>· code of the NeurIPS 2025 paper</span></li>
 						</ul>
 					</div>
@@ -119,8 +114,8 @@ J = multigeom.compute_fisher(
 					<div>
 						<p class="label">Follow-up work</p>
 						<ul class="link-list">
-							<li><a href="https://doi.org/10.64898/2026.10.22.761206">The multi-scale geometry of neural encoding</a> <span>· bioRxiv 2026 · applies the geometry to spatial, motor and visual codes</span></li>
-							<li><a href="https://doi.org/10.64898/2025.12.24.696343">Stimulus sensitivity in noisy neural systems</a> <span>· bioRxiv 2025 · when Fisher information misleads, and two alternatives that remain meaningful</span></li>
+							<li><a href="https://doi.org/10.64898/2026.10.22.761206">The multi-scale geometry of neural encoding</a> <span>· bioRxiv 2026</span></li>
+							<li><a href="https://doi.org/10.64898/2025.12.24.696343">Stimulus sensitivity in noisy neural systems</a> <span>· bioRxiv 2025</span></li>
 						</ul>
 					</div>
 				</aside>
@@ -137,30 +132,26 @@ J = multigeom.compute_fisher(
 
 			<figure class="figure figures">
 				<div class="figure-frame"><img src="images/research/switching_observer.webp" alt="Schematic: a Bayesian observer predicts a single mode of estimates between the prior and the sensory evidence; a switching observer predicts two modes, one at the prior and one at the evidence, with the same mean estimate" width="1760" height="616" loading="lazy" /></div>
-				<figcaption>Schematic of the two observers' predictions. Both can predict the same average estimate; only the full distribution of estimates tells them apart. Human estimates were bimodal, with modes near the prior and near the sensory evidence, as the switching observer predicts.</figcaption>
+				<figcaption>Schematic. Both observers can predict the same mean estimate; only the full distribution tells them apart. Human estimates were bimodal, as the switching observer predicts.</figcaption>
 			</figure>
 
 			<div class="story-grid">
 				<div class="story-body">
 					<div>
-						<p class="label">Problem</p>
-						<p>Perceptual estimates are often called Bayes-optimal because their mean and variability match an observer that multiplies prior knowledge with sensory evidence. But different computations can produce the same averages.</p>
+						<p class="label">Approach</p>
+						<p>Perceptual estimates often match, on average, a Bayesian observer that combines prior and evidence. In motion-direction and orientation tasks, we varied the strength of the evidence and of the prior, and compared full estimate distributions with Bayesian observers and alternatives.</p>
 					</div>
 					<div>
-						<p class="label">What we did</p>
-						<p>In motion-direction and orientation estimation tasks, we varied the strength of the sensory evidence (motion coherence or contrast) and of the prior (the set of directions or orientations shown), and compared the full distributions of human estimates with several Bayesian observers and alternatives.</p>
-					</div>
-					<div>
-						<p class="label">What changed</p>
-						<p>Estimate means and variability agreed closely with a basic Bayesian observer, yet the distributions were bimodal, with modes near the prior and near the evidence. An observer that switches between prior and evidence, rather than combining them, explained the data better than the basic and several other Bayesian observers. Near-optimal behaviour can come from a frugal switching heuristic, and testing full response distributions, not only their averages, can reveal it.</p>
+						<p class="label">Result</p>
+						<p>Means and variability matched a basic Bayesian observer, yet estimates were bimodal, near the prior and near the evidence. An observer that switches between them, rather than combining them, explained the data better than the basic and several other Bayesian observers.</p>
 					</div>
 					<div>
 						<p class="label">Why it matters for AI</p>
-						<p>Matching average performance does not identify the computation behind it. The same experimental logic, varying the reliability of prior knowledge and of new evidence and examining full response distributions, applies to learned systems.</p>
+						<p>Matching average performance does not identify the computation; full response distributions under controlled conditions can.</p>
 					</div>
 					<div>
 						<p class="label">My contribution</p>
-						<p>First author. I designed the study with Justin Gardner, ran the experiments, analysed the data and co-wrote the paper.</p>
+						<p>First author: designed the study with Justin Gardner, ran the experiments, analysed the data and co-wrote the paper.</p>
 					</div>
 				</div>
 
@@ -168,7 +159,7 @@ J = multigeom.compute_fisher(
 					<div class="box">
 						<p class="label">Use it</p>
 						<ul class="link-list">
-							<li><a href="https://github.com/steevelaquitaine/projInference">projInference</a> <span>· task, analyses and observer models</span></li>
+							<li><a href="https://github.com/steevelaquitaine/projInference">projInference</a> <span>· task, analyses, models</span></li>
 							<li><a href="https://doi.org/10.17632/nxkvtrj9ps.1">Dataset</a> <span>· Mendeley Data</span></li>
 							<li><a href="https://steevelaquitaine.github.io/projInference/">Project page</a></li>
 						</ul>
@@ -191,7 +182,7 @@ J = multigeom.compute_fisher(
 					</li>
 					<li>
 						<div class="source"><a href="https://doi.org/10.1038/s44271-024-00162-w">Bévalot &amp; Meyniel</a>Communications Psychology, 2024</div>
-						<div class="what">Cite it when noting that establishing how Bayesian a computation is requires comparisons with more alternative models.</div>
+						<div class="what">Cite it when noting that quantifying how Bayesian a computation is requires more model comparisons.</div>
 					</li>
 				</ul>
 				<p class="cited-in">Also cited by de Lange, Heilbron &amp; Kok (Trends in Cognitive Sciences, 2018), Darlington, Beck &amp; Lisberger (Nature Neuroscience, 2018), Sohn &amp; Jazayeri (PNAS, 2021) and Kovács &amp; Lengyel (Current Opinion in Neurobiology, 2026).</p>
@@ -208,30 +199,26 @@ J = multigeom.compute_fisher(
 
 			<figure class="figure figures">
 				<div class="figure-frame"><img src="images/research/spike_sorting_manifolds.webp" alt="Ring-shaped neural manifold of the ground-truth population responding to 360 stimulus directions, and distorted, broken or collapsed manifolds of the populations isolated by six spike sorters and by threshold crossing" width="2080" height="299" loading="lazy" /></div>
-				<figcaption>Neural manifolds evoked by 360 stimulus directions, for the ground-truth population and for the units isolated by six spike sorters and by multi-unit threshold crossing. Sorting distorts the geometry of the population response. Laquitaine et al., Nature Communications (accepted).</figcaption>
+				<figcaption>Manifolds evoked by 360 stimulus directions in the ground-truth population and in the units isolated by six sorters and by threshold crossing: sorting distorts the population geometry.</figcaption>
 			</figure>
 
 			<div class="story-grid">
 				<div class="story-body">
 					<div>
-						<p class="label">Problem</p>
-						<p>Dense probes such as Neuropixels record hundreds of neurons, and every analysis depends on spike sorting. In real recordings the true spikes are unknown, so sorting errors, and how they change scientific conclusions, cannot be measured directly.</p>
+						<p class="label">Approach</p>
+						<p>In real recordings the true spikes are unknown, so sorting errors cannot be measured. We simulated dense recordings from a detailed model of a rat cortical column (30,190 neurons) in which every spike is known, validated them against in vivo data, and evaluated modern sorters, including their effect on stimulus discrimination.</p>
 					</div>
 					<div>
-						<p class="label">What we did</p>
-						<p>We simulated dense recordings from a biophysically detailed model of a rat cortical column of 30,190 neurons in which every spike is known, validated the traces against in vivo recordings, evaluated modern spike sorters, and linked their accuracy to each neuron's properties. We also stimulated the network to measure how sorting errors affect stimulus discrimination.</p>
-					</div>
-					<div>
-						<p class="label">What changed</p>
-						<p>Sorters isolated about 10% of the neurons within 50 µm of the probe. This undersampling alone did not impair stimulus discrimination, but sorting biases related to firing rate, spike extent, synaptic type and layer reduced it by nearly half. Realistic models with complete ground truth are a complementary way to evaluate and improve spike sorting.</p>
+						<p class="label">Result</p>
+						<p>Sorters isolated about 10% of the neurons within 50 µm of the probe. This undersampling alone did not impair stimulus discrimination, but biases related to firing rate, spike extent, synaptic type and layer nearly halved it.</p>
 					</div>
 					<div>
 						<p class="label">Why it matters for AI</p>
-						<p>Errors in a measurement pipeline can be systematic rather than random, and change the conclusion. Evaluations need ground truth that exposes which cases a method gets wrong, not only how often.</p>
+						<p>Pipeline errors can be systematic rather than random, and change the conclusion; evaluations need ground truth that shows which cases fail.</p>
 					</div>
 					<div>
 						<p class="label">My contribution</p>
-						<p>First and corresponding author. I wrote <a href="https://github.com/spikebias/spikebias">spikebias</a>, which measures these biases for any sorter and any recording with ground truth, and <a href="https://steevelaquitaine.github.io/spikecurate/">spikecurate</a>, a classifier that selects well-sorted units. The recordings, ground truth and sortings are public on the DANDI Archive.</p>
+						<p>First and corresponding author. I wrote <a href="https://github.com/spikebias/spikebias">spikebias</a>, which measures these biases, and <a href="https://steevelaquitaine.github.io/spikecurate/">spikecurate</a>, which selects well-sorted units.</p>
 					</div>
 				</div>
 
@@ -249,8 +236,7 @@ gt = sb.first_minutes(
 sorting = datasets.load_sorting(
     "npx_spont", sorter="ks4")
 accuracy = sb.sorting_accuracy(gt, sorting)</pre>
-						<p>Streams the simulated recordings, ground truth and sortings from the DANDI Archive.</p>
-						<ul class="link-list">
+												<ul class="link-list">
 							<li><a href="https://github.com/spikebias/spikebias">spikebias</a> <span>· GitHub, </span><a href="https://pypi.org/project/spikebias/">PyPI</a></li>
 							<li><a href="https://steevelaquitaine.github.io/spikecurate/">spikecurate</a> <span>· curation of single units</span></li>
 							<li><a href="https://dandiarchive.org/dandiset/001250">Dataset</a> <span>· DANDI 001250</span></li>
@@ -271,11 +257,11 @@ accuracy = sb.sorting_accuracy(gt, sorting)</pre>
 				<ul class="cites">
 					<li>
 						<div class="source"><a href="https://doi.org/10.7554/eLife.110588">Garcia et al.</a>eLife, 2026</div>
-						<div class="what">Identify full-network simulations such as ours as a source of complete ground truth for benchmarking spike sorting, and discuss their computational cost and the in vitro origin of cell models.</div>
+						<div class="what">Identify full-network simulations like ours as a source of complete ground truth for spike-sorting benchmarks, noting their computational cost.</div>
 					</li>
 					<li>
 						<div class="source"><a href="https://doi.org/10.7554/eLife.110170">Buccino et al.</a>eLife, 2026</div>
-						<div class="what">Discuss it among the simulation-based approaches to benchmarking spike sorters.</div>
+						<div class="what">Discuss it among simulation-based benchmarks of spike sorters.</div>
 					</li>
 				</ul>
 				<p class="cited-in">Also cited by Siegle &amp; Steinmetz (Nature Reviews Neuroscience, 2026) and Giraud et al. (eLife, 2025).</p>
@@ -290,11 +276,11 @@ accuracy = sb.sorting_accuracy(gt, sorting)</pre>
 			<div class="earlier">
 				<div>
 					<h3>Learning in the basal ganglia</h3>
-					<p>Recording from the dorsal putamen of monkeys learning a two-armed bandit task, we found that population activity at the very start of a session predicted whether the animal would have a good or a bad learning day. <a href="https://doi.org/10.1371/journal.pone.0080683">PLoS ONE, 2013</a> · first author.</p>
+					<p>Dorsal putamen activity at the start of a session predicted whether monkeys would have a good or a bad learning day. <a href="https://doi.org/10.1371/journal.pone.0080683">PLoS ONE, 2013</a> · first author.</p>
 				</div>
 				<div>
 					<h3>Self-organising network structure</h3>
-					<p>Adaptive rewiring of directed networks, based on advection and consensus, produces convergent–divergent units: hubs that collect inputs from local pools and broadcast outputs back to them. <a href="https://doi.org/10.1016/j.cnsns.2021.106135">Communications in Nonlinear Science and Numerical Simulation, 2022</a>.</p>
+					<p>Adaptive rewiring of directed networks produces convergent–divergent units, hubs that pool inputs and broadcast outputs. <a href="https://doi.org/10.1016/j.cnsns.2021.106135">Communications in Nonlinear Science and Numerical Simulation, 2022</a>.</p>
 				</div>
 			</div>
 		</div>

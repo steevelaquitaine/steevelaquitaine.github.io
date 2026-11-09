@@ -45,10 +45,7 @@
 					<h1>Steeve Laquitaine, PhD</h1>
 					<p class="role">Research Scientist · Neural representations, information theory and inference</p>
 					<p class="lead">I develop mathematical and computational methods to understand what neural networks represent and how they use uncertain information.</p>
-					<div class="copy">
-						<p>My research connects information theory, generative modelling and computational neuroscience. I measure the information encoded by neural populations, distinguish competing mechanisms of inference, and identify biases that distort our understanding of neural computation. Across these problems, I combine theory, controlled experiments and reproducible software.</p>
-						<p>I am a research scientist at the Paris Vision Institute (Sorbonne Université, INSERM, CNRS) and an affiliate at Stanford University. Previously, I worked at EPFL's Blue Brain Project, Stanford University and the RIKEN Brain Science Institute, and as a Lead Data Scientist at Capgemini Engineering, where I supervised teams developing and deploying machine-learning software in production.</p>
-					</div>
+					<p class="affil">Research scientist, Paris Vision Institute (Sorbonne Université) · Affiliate, Stanford University · Previously EPFL Blue Brain Project, Stanford and RIKEN, and Lead Data Scientist at Capgemini Engineering</p>
 					<div class="actions">
 						<a class="btn primary" href="research.html">Selected research</a>
 						<a class="btn" href="publications.html">Publications</a>
@@ -94,56 +91,33 @@
 		</div>
 	</header>
 
-	<!-- How I work -->
-	<section class="section">
-		<div class="wrap">
-			<div class="section-head">
-				<div>
-					<h2 class="section-title">How I work</h2>
-					<p class="section-lead">I look for cases where a convincing measurement supports the wrong explanation, then build the method and the experiment that tell the explanations apart.</p>
-				</div>
-			</div>
-			<div class="pillars">
-				<div class="pillar">
-					<h3>More informative evaluations</h3>
-					<p>Aggregate scores can hide the mechanism. Human estimates that matched Bayesian averages came from a strategy that switches between prior and evidence. The selection biases of spike sorters, not the neurons they miss, nearly halve the stimulus information of a recorded population.</p>
-				</div>
-				<div class="pillar">
-					<h3>Principled methods that scale</h3>
-					<p>I derive measures from explicit axioms and first principles, then make them practical. Our decomposition of mutual information and our multi-scale information geometry are estimated with diffusion models, for large populations and natural images.</p>
-				</div>
-				<div class="pillar">
-					<h3>Experiments and software built for reuse</h3>
-					<p>I design controlled experiments and ground-truth simulations, and release the methods as tested Python packages and public datasets. In industry, I supervised four teams developing and deploying machine-learning software in production.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<!-- Three research stories -->
 	<section class="section">
 		<div class="wrap">
 			<div class="section-head">
-				<h2 class="section-title">Selected research</h2>
-				<a class="more" href="research.html">Problem, contribution and results →</a>
+				<div>
+					<h2 class="section-title">Selected research</h2>
+					<p class="section-lead">I look for cases where a convincing measurement supports the wrong explanation, then build the method and the experiment that tell the explanations apart.</p>
+				</div>
+				<a class="more" href="research.html">Details and code →</a>
 			</div>
 			<div class="cards">
 				<article class="card">
 					<div class="card-media" role="img" aria-label="A curved surface covered by a warped grid, with natural images mapped onto it" style="background-image: url('images/multigeom_card.jpeg'); background-position: center 55%;"></div>
 					<h3><a href="research.html#information">Measuring what neural networks encode</a></h3>
-					<p>An axiomatic decomposition of mutual information and a multi-scale information geometry, both estimated with diffusion models, show which stimuli and features a population encodes.</p>
+					<p>Principled measures, scaled with diffusion models, of which inputs and features a population encodes.</p>
 					<div class="meta">NeurIPS 2025 · NeurIPS 2026 oral</div>
 				</article>
 				<article class="card">
 					<div class="card-media" role="img" aria-label="Moving dots, a prior and a likelihood, and estimates that cluster at two directions on a circle" style="background-image: url('images/research/switching_card.webp');"></div>
 					<h3><a href="research.html#inference">Telling apart mechanisms behind near-optimal behaviour</a></h3>
-					<p>Human estimates matched Bayesian predictions on average, yet their full distributions revealed a strategy that switches between prior knowledge and sensory evidence.</p>
+					<p>Human estimates matched Bayesian averages, yet their full distributions revealed a switching strategy.</p>
 					<div class="meta">Neuron 2018</div>
 				</article>
 				<article class="card">
 					<div class="card-media" role="img" aria-label="A cortical column recorded by a probe, its traces, and a spike raster where only a few neurons are isolated" style="background-image: url('images/spikebias_card.webp');"></div>
 					<h3><a href="research.html#evaluation">Evaluating spike sorting against ground truth</a></h3>
-					<p>A detailed cortical simulation with known spikes shows that sorters isolate about 10% of nearby neurons, and that their biases nearly halve stimulus information.</p>
+					<p>With every spike known, a detailed cortical simulation shows that sorting biases nearly halve stimulus information.</p>
 					<div class="meta">Nature Communications (accepted)</div>
 				</article>
 			</div>
@@ -154,10 +128,7 @@
 	<section class="section">
 		<div class="wrap">
 			<div class="section-head">
-				<div>
-					<h2 class="section-title">Research influence</h2>
-					<p class="section-lead">Recent papers that build on, test or discuss this work.</p>
-				</div>
+				<h2 class="section-title">Research influence</h2>
 			</div>
 			<ul class="cites">
 				<li>
@@ -166,14 +137,14 @@
 				</li>
 				<li>
 					<div class="source"><a href="https://doi.org/10.1038/s44271-024-00162-w">Bévalot &amp; Meyniel</a>Communications Psychology, 2024</div>
-					<div class="what">Cite it when noting that establishing how Bayesian a computation is requires comparisons with more alternative models.</div>
+					<div class="what">Cite it when noting that quantifying how Bayesian a computation is requires more model comparisons.</div>
 				</li>
 				<li>
 					<div class="source"><a href="https://doi.org/10.7554/eLife.110588">Garcia et al.</a>eLife, 2026</div>
-					<div class="what">Identify full-network simulations such as ours as a source of complete ground truth for benchmarking spike sorting.</div>
+					<div class="what">Identify full-network simulations like ours as a source of complete ground truth for spike-sorting benchmarks.</div>
 				</li>
 			</ul>
-			<p class="cited-in">My papers are cited in Trends in Cognitive Sciences, Nature Neuroscience, Nature Human Behaviour, Nature Reviews Neuroscience, Nature Communications, PNAS and eLife. <a href="https://scholar.google.com/citations?user=ftTg_S4AAAAJ">Google Scholar</a></p>
+			<p class="cited-in">Also cited in Trends in Cognitive Sciences, Nature Neuroscience, Nature Human Behaviour, Nature Reviews Neuroscience, PNAS and eLife. <a href="https://scholar.google.com/citations?user=ftTg_S4AAAAJ">Google Scholar</a></p>
 		</div>
 	</section>
 
@@ -184,13 +155,11 @@
 				<div>
 					<p class="eyebrow">Industry experience</p>
 					<h2>From research to production</h2>
-					<p class="role">Lead Data Scientist, Capgemini Engineering · three years</p>
+					<p class="role">Lead Data Scientist, Capgemini Engineering</p>
 				</div>
 				<ul class="facts">
-					<li>Supervised four teams through the development and deployment of machine-learning software in production.</li>
-					<li>Designed and taught a course on developing and deploying reproducible, maintainable machine-learning models for practitioners at Société Générale (2020–2021), and lectured there on model monitoring.</li>
-					<li>Led research on unsupervised intent recognition and designed the corresponding training (Hybrid Intelligence, Capgemini Engineering, 2021).</li>
-					<li>Continued research in parallel as a visiting scholar at KU Leuven, on how adaptive rewiring shapes the structure of neural networks.</li>
+					<li>Supervised four teams for three years through the development and deployment of machine-learning software in production.</li>
+					<li>Designed and taught a course on reproducible, maintainable machine-learning engineering for Société Générale practitioners (2020–2021).</li>
 				</ul>
 			</div>
 		</div>
@@ -201,7 +170,6 @@
 		<div class="wrap">
 			<h2 class="section-title">Research directions</h2>
 			<p class="statement">I aim to extend this work toward understanding how learned representations support inference under changing conditions: when systems combine prior knowledge with new evidence, when they rely on shortcuts, and which experiments distinguish these strategies.</p>
-			<p class="statement-sub">I am particularly interested in connecting principled measures of representation with behavioural tests that expose failures hidden by aggregate accuracy.</p>
 		</div>
 	</section>
 
