@@ -1,5 +1,5 @@
-/* Site design shared by index, research, publications, software and teaching pages.
-   statement.html and teaching_statement.html keep the Strata template (main.css, theme.css).
+/* Site design shared by the index, research, publications, software, teaching and teaching statement pages.
+   statement.html keeps the Strata template (main.css, theme.css).
    Dark mode applies when <html data-theme="dark"> (set by assets/js/theme.js). */
 
 :root {
@@ -384,6 +384,19 @@ main { padding-top: var(--nav-h); }
 
 .pill:hover { text-decoration: none; background: var(--line); }
 
+.eyebrow a { color: var(--muted); }
+
+/* Long-form text (teaching statement): a readable measure, left-aligned with the page heading */
+.prose { padding-bottom: 80px; }
+.prose > * { max-width: 720px; }
+.prose p, .prose li { font-size: 18px; line-height: 1.7; }
+.prose .intro { font-family: var(--font-display); font-size: 22px; line-height: 1.55; }
+.prose h2 { margin: 52px 0 16px; font-size: 26px; line-height: 1.25; }
+.prose ol { margin: 0 0 1em; padding-left: 1.4em; }
+.prose li { margin: 8px 0; padding-left: 4px; }
+.prose li::marker { color: var(--faint); }
+.prose li strong { font-weight: 500; }
+
 /* Research page: one story per project */
 .story { padding: 72px 0; border-top: 1px solid var(--line); }
 .story h2 { margin-bottom: 16px; font-size: 36px; line-height: 1.15; }
@@ -545,6 +558,7 @@ main { padding-top: var(--nav-h); }
   .section-title { font-size: 28px; }
   .story h2 { font-size: 29px; }
   .question { font-size: 20px; }
+  .prose .intro { font-size: 19px; }
   .cards, .highlights { grid-template-columns: 1fr; }
   .figure-frame { padding: 12px; border-radius: 14px; }
   .figure-frame img { min-width: 600px; }   /* wide figures pan inside their frame */
